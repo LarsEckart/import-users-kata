@@ -11,7 +11,7 @@ A former colleague created a simple script to read user information. However, af
 You discussed the situation with your manager, who has agreed to give you time to refactor the script for better readability and maintainability, and to resolve the date of birth display issue. The current code is straightforward but overly tangled, and team members are hesitant to make further changes.
 
 - Refactor the current code for clarity and maintainability, ensuring the original behavior is preserved.
-- Correct the date of birth display to ensure accuracy.
+- Correct the date of birth display, display it as yyyy-mm-dd.
 
 ### ⏩ Next iteration
 
