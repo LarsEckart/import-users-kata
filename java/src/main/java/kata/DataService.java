@@ -6,6 +6,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.List;
 import java.util.Scanner;
 
 import org.json.JSONArray;
@@ -15,7 +16,7 @@ class DataService {
 
     private static final String USER_URL = "https://randomuser.me/api/?inc=gender,name,email,location,dob&results=5&seed=a1b25cd956e2038h";
 
-    public ArrayList<String[]> getDataFromUrl() throws IOException {
+    public List<String[]> getDataFromUrl() throws IOException {
         // Parse URL content
         String url = USER_URL;
         String command = "curl -X GET " + url;
@@ -52,7 +53,7 @@ class DataService {
     }
 
     // TODO: could we parse the String[] into an Object, User class or something?
-    public ArrayList<String[]> getDataFromCsv(String csvFileName) {
+    public List<String[]> getDataFromCsv(String csvFileName) {
         // Parse CSV file
         ArrayList<String[]> result = new ArrayList<>();
         Scanner csvFile = new Scanner(Thread.currentThread().getContextClassLoader().getResourceAsStream(csvFileName));

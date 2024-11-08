@@ -1,25 +1,22 @@
 package kata;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
-
     public static void main(String[] args) throws Exception {
-        DataService dataService = new DataService();
-        ArrayList<String[]> usersData = dataService.getDataFromCsv("users.csv");
+        testable(new DataService(), new Output());
+    }
 
-        ArrayList<String[]> usersDataFromWeb = dataService.getDataFromUrl();
+    public static void testable(DataService dataService, Output output) throws IOException {
+        List<String[]> usersData = dataService.getDataFromCsv("users.csv");
+        List<String[]> usersDataFromWeb = dataService.getDataFromUrl();
 
-        /**
-         * csv_providers ArrayList<id: number,
-         *       email: string
-         *       first_name: string
-         *       last_name: string>
-         */
-        usersData.addAll(usersDataFromWeb); // merge arrays
+        usersData.addAll(usersDataFromWeb);
 
-        new Output().printUsers(usersData);
+        output.printUsers(usersData);
     }
 
 }
