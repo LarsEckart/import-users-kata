@@ -7,7 +7,7 @@ public class Main {
 
   public static void main(String[] args) {
     testable(
-        List.of(new CsvProvider("users.csv"), new SeededRandomUserDataProvider()), new Output());
+        List.of(new CsvProvider("users.csv"), new SeededRandomUserDataProvider(), new SqLiteDataProvider("users-source.db")), new Output());
   }
 
   public static void testable(List<DataProvider> providers, Output output) {
