@@ -1,22 +1,23 @@
 package kata;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
-        testable(new DataService(), new Output());
+  public static void main(String[] args) {
+    testable(
+        List.of(new CsvProvider("users.csv"), new SeededRandomUserDataProvider()), new Output());
+  }
+
+  public static void testable(List<DataProvider> providers, Output output) {
+    List<String[]> usersData = new ArrayList<>();
+    for (DataProvider provider : providers) {
+      usersData.addAll(provider.getData());
     }
+    output.printUsers(usersData);
 
-    public static void testable(DataService dataService, Output output) throws IOException {
-        List<String[]> usersData = dataService.getDataFromCsv("users.csv");
-        List<String[]> usersDataFromWeb = dataService.getDataFromUrl();
-
-        usersData.addAll(usersDataFromWeb);
-
-        output.printUsers(usersData);
-    }
+    output.printUsers(usersData);
+  }
 
 }

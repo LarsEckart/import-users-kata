@@ -43,7 +43,7 @@ class OutputTest {
         PrintStream ps = new PrintStream(baos, true, StandardCharsets.UTF_8)) {
       System.setOut(ps);
 
-      List<String[]> usersData = new DataService().getDataFromCsv("UserInfoWithBirthdate.csv");
+      List<String[]> usersData = new CsvProvider("UserInfoWithBirthdate.csv").getData();
 
       output.printUsers(usersData);
 
