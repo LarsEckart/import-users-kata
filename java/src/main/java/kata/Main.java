@@ -3,19 +3,13 @@ package kata;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 public class Main {
 
-  public static void main(String[] args) throws Exception {
-    doStuff(Main::output);
-    doStuff(Main::outputToTextFile);
-  }
-
-  private static void doStuff(Consumer<List<User>> output) {
+  public static void main(String[] args) {
 
     List<Importer> importers = List.of(
         new CsvImporter(),
@@ -27,7 +21,8 @@ public class Main {
             .flatMap(i -> i.importUsers().stream())
             .toList();
 
-    output.accept(users);
+    output(users);
+    outputToTextFile(users);
   }
 
   private static void output(List<User> users) {
