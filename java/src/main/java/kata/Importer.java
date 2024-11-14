@@ -1,8 +1,8 @@
 package kata;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface Importer {
 
-  ArrayList<User> importUsers();
+  List<User> importUsers();
 }
