@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
-import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -12,9 +11,9 @@ public class Main {
   public static void main(String[] args) {
 
     List<Importer> importers = List.of(
-        new CsvImporter(),
-        new RandomUserApiImporter(),
-        new SqLiteImporter()
+        new CsvImporter("users.csv"),
+        new RandomUserApiImporter(RandomUserApiImporter.USER_URL),
+        new SqLiteImporter("file:users-source.db")
     );
 
     List<User> users =

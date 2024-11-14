@@ -10,13 +10,18 @@ import org.json.JSONObject;
 
 class RandomUserApiImporter implements Importer {
 
-  private static final String USER_URL = "https://randomuser.me/api/?inc=gender,name,email,location,dob&results=5&seed=a9b25cd955e2037h";
+  public static final String USER_URL = "https://randomuser.me/api/?inc=gender,name,email,location,dob&results=5&seed=a9b25cd955e2037h";
+  // Parse URL content
+  public String url;
+
+  public RandomUserApiImporter(String url) {
+    this.url = url;
+  }
 
   @Override
   public ArrayList<User> importUsers() {
     ArrayList<User> users = new ArrayList<>();
-    // Parse URL content
-    String url = USER_URL;
+    String url = this.url;
     String command = "curl -X GET " + url;
     ProcessBuilder processBuilder = new ProcessBuilder(command.split(" "));
     Process process = null;

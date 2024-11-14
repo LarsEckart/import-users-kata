@@ -13,9 +13,15 @@ import org.jooq.impl.DSL;
 
 class SqLiteImporter implements Importer {
 
+  public String dbName;
+
+  public SqLiteImporter(String dbName) {
+    this.dbName = dbName;
+  }
+
   @Override
   public List<User> importUsers() {
-    String url = "jdbc:sqlite:file:users-source.db";
+    String url = "jdbc:sqlite:" + dbName;
 
     try (Connection conn = DriverManager.getConnection(url)) {
       DSLContext create = DSL.using(conn, SQLDialect.SQLITE);

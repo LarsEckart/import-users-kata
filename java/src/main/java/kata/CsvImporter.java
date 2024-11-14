@@ -6,11 +6,17 @@ import java.util.Scanner;
 
 class CsvImporter implements Importer {
 
+  public String name;
+
+  public CsvImporter(String name) {
+    this.name = name;
+  }
+
   @Override
   public ArrayList<User> importUsers() {
     // Parse CSV file
     ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-    InputStream is = classloader.getResourceAsStream("users.csv");
+    InputStream is = classloader.getResourceAsStream(name);
     ArrayList<User> users = new ArrayList<>();
     Scanner csvFile = new Scanner(is);
     while (csvFile.hasNextLine()) {
