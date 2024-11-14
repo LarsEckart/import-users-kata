@@ -17,8 +17,8 @@ public class Main {
   private static void doStuff(Consumer<ArrayList<User>> output) throws IOException {
     ArrayList<User> users = new ArrayList<>();
 
-    users.addAll(CsvReader.readCsv());
-    users.addAll(RandomUserApiReader.readInternet());
+    users.addAll(new CsvImporter().importUsers());
+    users.addAll(new RandomUserApiImporter().importUsers());
 
     output.accept(users);
   }

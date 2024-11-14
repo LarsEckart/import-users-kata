@@ -8,17 +8,23 @@ import java.util.Scanner;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-class RandomUserApiReader {
+class RandomUserApiImporter implements Importer {
 
   private static final String USER_URL = "https://randomuser.me/api/?inc=gender,name,email,location,dob&results=5&seed=a9b25cd955e2037h";
 
-  static ArrayList<User> readInternet() throws IOException {
+  @Override
+  public ArrayList<User> importUsers(){
     ArrayList<User> users = new ArrayList<>();
     // Parse URL content
     String url = USER_URL;
     String command = "curl -X GET " + url;
     ProcessBuilder processBuilder = new ProcessBuilder(command.split(" "));
-    Process process = processBuilder.start();
+    Process process = null;
+    try {
+      process = processBuilder.start();
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
     InputStream processInputStream = process.getInputStream();
     Scanner webProvider = new Scanner(processInputStream);
     String result = "";

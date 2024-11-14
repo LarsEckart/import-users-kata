@@ -4,9 +4,10 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class CsvReader {
+class CsvImporter implements Importer {
 
-  static ArrayList<User> readCsv() {
+  @Override
+  public ArrayList<User> importUsers() {
     // Parse CSV file
     ClassLoader classloader = Thread.currentThread().getContextClassLoader();
     InputStream is = classloader.getResourceAsStream("users.csv");
