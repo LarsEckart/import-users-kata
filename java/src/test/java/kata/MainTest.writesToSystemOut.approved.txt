@@ -13,5 +13,9 @@
 * 100000000003 * France       * zip        * Melvin Perrin        * 1964-08-20               * melvin.perrin@example.com                *
 * 100000000004 * Australia    * zip        * Dawn Snyder          * 1952-06-29               * dawn.snyder@example.com                  *
 * 100000000005 * Netherlands  * zip        * Irina Kaptein        * 1984-11-10               * irina.kaptein@example.com                *
+* 626154334    * Germany      * 76694      * Alice Smith          * 1985-04-23               * alice.smith@example.com                  *
+* 626155767    * USA          * 90210      * Bob Johnson          * 1990-07-15               * bob.johnson@example.com                  *
+* 626184334    * Spain        * 28013      * Carlos Diaz          * 1978-12-05               * carlos.diaz@example.com                  *
+* 626254399    * China        * 100000     * Diana Chen           * 1995-03-10               * diana.chen@example.com                   *
 *****************************************************************************************************************************************
-12 users in total!
+16 users in total!

@@ -15,6 +15,10 @@ class Birthdate {
     return new Birthdate(ZonedDateTime.parse(isoFormattedDate).toLocalDate());
   }
 
+  public static Birthdate of(LocalDate dob) {
+    return new Birthdate(dob);
+  }
+
   public String asString() {
     return date.toString();
   }

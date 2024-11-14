@@ -13,7 +13,8 @@ public class Main {
 
     List<Importer> importers = List.of(
         new CsvImporter(),
-        new RandomUserApiImporter()
+        new RandomUserApiImporter(),
+        new SqLiteImporter()
     );
 
     List<User> users =
