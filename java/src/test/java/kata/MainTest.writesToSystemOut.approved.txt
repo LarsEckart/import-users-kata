@@ -8,11 +8,11 @@
 * 270054311737 * India        * 82068      * Mitesh Kumari        * 1996-12-30               * mitesh.kumari@example.com                *
 * 202160712259 * Germany      * 8025       * Elena Mueller        * 1992-02-02               * elena.muller@example.com                 *
 * 270554319031 * India        * 82120      * Natasha Shah         * 1989-01-10               * natasha.shah@example.com                 *
-* 100000000001 * Australia    * zip        * Nevaeh Dunn          * 1971-01-19               * nevaeh.dunn@example.com                  *
-* 100000000002 * Norway       * zip        * Sara Abdallah        * 1945-04-18               * sara.abdallah@example.com                *
-* 100000000003 * France       * zip        * Melvin Perrin        * 1964-08-20               * melvin.perrin@example.com                *
-* 100000000004 * Australia    * zip        * Dawn Snyder          * 1952-06-29               * dawn.snyder@example.com                  *
-* 100000000005 * Netherlands  * zip        * Irina Kaptein        * 1984-11-10               * irina.kaptein@example.com                *
+* 100000000001 * Australia    * 5436       * Nevaeh Dunn          * 1971-01-19               * nevaeh.dunn@example.com                  *
+* 100000000002 * Norway       * 1409       * Sara Abdallah        * 1945-04-18               * sara.abdallah@example.com                *
+* 100000000003 * France       * 53029      * Melvin Perrin        * 1964-08-20               * melvin.perrin@example.com                *
+* 100000000004 * Australia    * 7852       * Dawn Snyder          * 1952-06-29               * dawn.snyder@example.com                  *
+* 100000000005 * Netherlands  * 8209 KI    * Irina Kaptein        * 1984-11-10               * irina.kaptein@example.com                *
 * 626154334    * Germany      * 76694      * Alice Smith          * 1985-04-23               * alice.smith@example.com                  *
 * 626155767    * USA          * 90210      * Bob Johnson          * 1990-07-15               * bob.johnson@example.com                  *
 * 626184334    * Spain        * 28013      * Carlos Diaz          * 1978-12-05               * carlos.diaz@example.com                  *

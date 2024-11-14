@@ -47,7 +47,7 @@ class RandomUserApiImporter implements Importer {
           Birthdate.fromIsoString(
               results.getJSONObject(i).getJSONObject("dob").getString("date")),
           results.getJSONObject(i).getJSONObject("location").getString("country"),
-          "zip",
+          String.valueOf(results.getJSONObject(i).getJSONObject("location").get("postcode")),
           results.getJSONObject(i).getString("email"))
       );
     }

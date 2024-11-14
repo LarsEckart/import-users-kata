@@ -26,7 +26,11 @@ class SqLiteImporter implements Importer {
           e -> {
             String location = e.getLocation();
             String[] split = location.split(", ");
-            return new User(e.getId(), e.getName(), Birthdate.of(e.getDob()), split[0],
+            return new User(
+                e.getId(),
+                e.getName(),
+                Birthdate.of(e.getDob()),
+                split[0],
                 split[1],
                 e.getEmail());
           }).toList();
