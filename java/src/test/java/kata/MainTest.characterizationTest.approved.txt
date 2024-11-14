@@ -1,0 +1,17 @@
+*****************************************************************************************************************************************
+* ID           * COUNTRY      * ZIP        * NAME                 * DOB                      * EMAIL                                    *
+*****************************************************************************************************************************************
+* 200189617246 * Germany      * 10780      * Lukas Schmidt        * 1997-02-19               * lukas.shmidt@example.com                 *
+* 200189016257 * Germany      * 15010      * Maria Fischer        * 1991-08-06               * maria.fischer@example.com                *
+* 230573109005 * Spain        * 15340      * Luis Sanchez         * 2001-06-22               * luis.sanchez@example.com                 *
+* 230854119034 * Italy        * 38019      * Elio Pausini         * 1976-04-11               * elio.pausini@example.com                 *
+* 270054311737 * India        * 82068      * Mitesh Kumari        * 1996-12-30               * mitesh.kumari@example.com                *
+* 202160712259 * Germany      * 8025       * Elena Mueller        * 1992-02-02               * elena.muller@example.com                 *
+* 270554319031 * India        * 82120      * Natasha Shah         * 1989-01-10               * natasha.shah@example.com                 *
+* 100000000001 * Australia    * zip        * Nevaeh Dunn          * 1971-01-19               * nevaeh.dunn@example.com                  *
+* 100000000002 * Norway       * zip        * Sara Abdallah        * 1945-04-18               * sara.abdallah@example.com                *
+* 100000000003 * France       * zip        * Melvin Perrin        * 1964-08-20               * melvin.perrin@example.com                *
+* 100000000004 * Australia    * zip        * Dawn Snyder          * 1952-06-29               * dawn.snyder@example.com                  *
+* 100000000005 * Netherlands  * zip        * Irina Kaptein        * 1984-11-10               * irina.kaptein@example.com                *
+*****************************************************************************************************************************************
+12 users in total!
