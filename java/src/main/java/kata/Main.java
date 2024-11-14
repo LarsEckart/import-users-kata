@@ -15,20 +15,22 @@ public class Main {
     doStuff(Main::outputToTextFile);
   }
 
-  private static void doStuff(Consumer<ArrayList<User>> output) {
+  private static void doStuff(Consumer<List<User>> output) {
 
     List<Importer> importers = List.of(
+        new CsvImporter(),
         new RandomUserApiImporter()
-        , new CsvImporter()
     );
 
-    ArrayList<User> users = new ArrayList<>(
-        importers.stream().parallel().flatMap(i -> i.importUsers().stream()).toList());
+    List<User> users =
+        importers.stream()
+            .flatMap(i -> i.importUsers().stream())
+            .toList();
 
     output.accept(users);
   }
 
-  private static void output(ArrayList<User> users) {
+  private static void output(List<User> users) {
     System.out.println(
         "*****************************************************************************************************************************************");
     System.out.println(String.format(
@@ -56,7 +58,7 @@ public class Main {
     System.out.println(users.size() + " users in total!");
   }
 
-  private static void outputToTextFile(ArrayList<User> users) {
+  private static void outputToTextFile(List<User> users) {
     try {
       Files.writeString(Path.of("output.txt"), users.stream().map(User::toString).collect(
           Collectors.joining("\n")));

@@ -6,12 +6,9 @@ import java.util.Scanner;
 
 class CsvImporter implements Importer {
 
-  private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(CsvImporter.class);
-
   @Override
   public ArrayList<User> importUsers() {
     // Parse CSV file
-    log.info("Importing users from CSV file");
     ClassLoader classloader = Thread.currentThread().getContextClassLoader();
     InputStream is = classloader.getResourceAsStream("users.csv");
     ArrayList<User> users = new ArrayList<>();
