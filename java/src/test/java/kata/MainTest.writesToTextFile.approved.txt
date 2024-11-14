@@ -1,0 +1,12 @@
+200189617246,Lukas Schmidt,1997-02-19,Germany,10780,lukas.shmidt@example.com
+200189016257,Maria Fischer,1991-08-06,Germany,15010,maria.fischer@example.com
+230573109005,Luis Sanchez,2001-06-22,Spain ,15340,luis.sanchez@example.com
+230854119034,Elio Pausini,1976-04-11,Italy ,38019,elio.pausini@example.com
+270054311737,Mitesh Kumari,1996-12-30,India ,82068,mitesh.kumari@example.com
+202160712259,Elena Mueller,1992-02-02,Germany,8025,elena.muller@example.com
+270554319031,Natasha Shah,1989-01-10,India ,82120,natasha.shah@example.com
+100000000001,Nevaeh Dunn,1971-01-19,Australia,zip,nevaeh.dunn@example.com
+100000000002,Sara Abdallah,1945-04-18,Norway,zip,sara.abdallah@example.com
+100000000003,Melvin Perrin,1964-08-20,France,zip,melvin.perrin@example.com
+100000000004,Dawn Snyder,1952-06-29,Australia,zip,dawn.snyder@example.com
+100000000005,Irina Kaptein,1984-11-10,Netherlands,zip,irina.kaptein@example.com
