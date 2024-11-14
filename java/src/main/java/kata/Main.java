@@ -24,29 +24,16 @@ public class Main {
   }
 
   private static void doStuff(Consumer<ArrayList<User>> output) throws IOException {
-    // Parse CSV file
-    ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-    InputStream is = classloader.getResourceAsStream("users.csv");
     ArrayList<User> users = new ArrayList<>();
-    Scanner csvFile = new Scanner(is);
-    while (csvFile.hasNextLine()) {
-      String line = csvFile.nextLine();
-      // fields: ID, gender, Name ,country, postcode, email, Birthdate
-      String[] attributes = line.split(",");
-      if (attributes.length == 0) {
-        continue;
-      }
-      if (!attributes[0].equals("id")) {
-        users.add(new User(
-            Long.parseLong(attributes[0]),
-            attributes[2],
-            parseToLocalDate(attributes[6]),
-            attributes[3],
-            attributes[4],
-            attributes[5]));
-      }
-    }
 
+    users.addAll(readCsv());
+    users.addAll(readInternet());
+
+    output.accept(users);
+  }
+
+  private static ArrayList<User> readInternet() throws IOException {
+    ArrayList<User> users = new ArrayList<>();
     // Parse URL content
     String url = USER_URL;
     String command = "curl -X GET " + url;
@@ -77,9 +64,33 @@ public class Main {
           results.getJSONObject(i).getString("email"))
       );
     }
+    return users;
+  }
 
-    // Print users
-    output.accept(users);
+  private static ArrayList<User> readCsv() {
+    // Parse CSV file
+    ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+    InputStream is = classloader.getResourceAsStream("users.csv");
+    ArrayList<User> users = new ArrayList<>();
+    Scanner csvFile = new Scanner(is);
+    while (csvFile.hasNextLine()) {
+      String line = csvFile.nextLine();
+      // fields: ID, gender, Name ,country, postcode, email, Birthdate
+      String[] attributes = line.split(",");
+      if (attributes.length == 0) {
+        continue;
+      }
+      if (!attributes[0].equals("id")) {
+        users.add(new User(
+            Long.parseLong(attributes[0]),
+            attributes[2],
+            parseToLocalDate(attributes[6]),
+            attributes[3],
+            attributes[4],
+            attributes[5]));
+      }
+    }
+    return users;
   }
 
   private static LocalDate parseToLocalDate(String attribute) {
