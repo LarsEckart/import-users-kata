@@ -1,15 +1,21 @@
 package kata;
 
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import org.approvaltests.Approvals;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
 
 class MainTest {
 
+  private static final Logger log = getLogger(MainTest.class);
+
   @Test
   void characterizationTest() {
+    log.info("Characterization test");
     PrintStream systemOut = System.out;
     try (ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream ps = new PrintStream(baos, true, StandardCharsets.UTF_8)) {

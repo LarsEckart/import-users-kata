@@ -11,6 +11,8 @@ dependencies {
     runtimeOnly(libs.sqlite)
 
     implementation(libs.json)
+    implementation(libs.slf4j)
+    implementation(libs.slf4jbasic)
 
     testImplementation(libs.junit)
     testImplementation(libs.approvaltests)

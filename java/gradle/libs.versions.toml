@@ -6,8 +6,11 @@ org-json-json = "20231013"
 org-junit-jupiter-junit-jupiter = "5.11.3"
 sqlite = '3.47.0.0'
 
+
 [libraries]
 sqlite = { module = "org.xerial:sqlite-jdbc", version.ref = "sqlite" }
 approvaltests = { module = "com.approvaltests:approvaltests", version.ref = "com-approvaltests-approvaltests" }
 json = { module = "org.json:json", version.ref = "org-json-json" }
 junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "org-junit-jupiter-junit-jupiter" }
+slf4j = { module = "org.slf4j:slf4j-api", version = "1.7.32" }
+slf4jbasic = { module = "org.slf4j:slf4j-simple", version = "1.7.32" }

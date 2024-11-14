@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
@@ -14,11 +15,15 @@ public class Main {
     doStuff(Main::outputToTextFile);
   }
 
-  private static void doStuff(Consumer<ArrayList<User>> output) throws IOException {
-    ArrayList<User> users = new ArrayList<>();
+  private static void doStuff(Consumer<ArrayList<User>> output) {
 
-    users.addAll(new CsvImporter().importUsers());
-    users.addAll(new RandomUserApiImporter().importUsers());
+    List<Importer> importers = List.of(
+        new RandomUserApiImporter()
+        , new CsvImporter()
+    );
+
+    ArrayList<User> users = new ArrayList<>(
+        importers.stream().parallel().flatMap(i -> i.importUsers().stream()).toList());
 
     output.accept(users);
   }

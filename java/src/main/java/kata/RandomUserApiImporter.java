@@ -1,5 +1,7 @@
 package kata;
 
+import static org.slf4j.LoggerFactory.getLogger;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigInteger;
@@ -7,13 +9,17 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.slf4j.Logger;
 
 class RandomUserApiImporter implements Importer {
+
+  private static final Logger log = getLogger(RandomUserApiImporter.class);
 
   private static final String USER_URL = "https://randomuser.me/api/?inc=gender,name,email,location,dob&results=5&seed=a9b25cd955e2037h";
 
   @Override
   public ArrayList<User> importUsers(){
+    log.info("Importing users from RandomUser API");
     ArrayList<User> users = new ArrayList<>();
     // Parse URL content
     String url = USER_URL;
