@@ -1,7 +1,9 @@
 package kata;
 
-import java.time.LocalDate;
+public record User(long id, String name, Birthdate dob, String country, String zip, String email) {
 
-public record User(long id, String name, LocalDate dob, String country, String zip, String email) {
-
+  @Override
+  public String toString() {
+    return id + "," + name + "," + dob.asString() + "," + country + "," + zip + "," + email;
+  }
 }

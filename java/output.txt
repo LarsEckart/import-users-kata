@@ -1,12 +1,12 @@
-User[id=200189617246, name=Lukas Schmidt, dob=1997-02-19, country=Germany, zip=10780, email=lukas.shmidt@example.com]
-User[id=200189016257, name=Maria Fischer, dob=1991-08-06, country=Germany, zip=15010, email=maria.fischer@example.com]
-User[id=230573109005, name=Luis Sanchez, dob=2001-06-22, country=Spain , zip=15340, email=luis.sanchez@example.com]
-User[id=230854119034, name=Elio Pausini, dob=1976-04-11, country=Italy , zip=38019, email=elio.pausini@example.com]
-User[id=270054311737, name=Mitesh Kumari, dob=1996-12-30, country=India , zip=82068, email=mitesh.kumari@example.com]
-User[id=202160712259, name=Elena Mueller, dob=1992-02-02, country=Germany, zip=8025, email=elena.muller@example.com]
-User[id=270554319031, name=Natasha Shah, dob=1989-01-10, country=India , zip=82120, email=natasha.shah@example.com]
-User[id=100000000001, name=Nevaeh Dunn, dob=1971-01-19, country=Australia, zip=zip, email=nevaeh.dunn@example.com]
-User[id=100000000002, name=Sara Abdallah, dob=1945-04-18, country=Norway, zip=zip, email=sara.abdallah@example.com]
-User[id=100000000003, name=Melvin Perrin, dob=1964-08-20, country=France, zip=zip, email=melvin.perrin@example.com]
-User[id=100000000004, name=Dawn Snyder, dob=1952-06-29, country=Australia, zip=zip, email=dawn.snyder@example.com]
-User[id=100000000005, name=Irina Kaptein, dob=1984-11-10, country=Netherlands, zip=zip, email=irina.kaptein@example.com]
+200189617246,Lukas Schmidt,1997-02-19,Germany,10780,lukas.shmidt@example.com
+200189016257,Maria Fischer,1991-08-06,Germany,15010,maria.fischer@example.com
+230573109005,Luis Sanchez,2001-06-22,Spain ,15340,luis.sanchez@example.com
+230854119034,Elio Pausini,1976-04-11,Italy ,38019,elio.pausini@example.com
+270054311737,Mitesh Kumari,1996-12-30,India ,82068,mitesh.kumari@example.com
+202160712259,Elena Mueller,1992-02-02,Germany,8025,elena.muller@example.com
+270554319031,Natasha Shah,1989-01-10,India ,82120,natasha.shah@example.com
+100000000001,Nevaeh Dunn,1971-01-19,Australia,zip,nevaeh.dunn@example.com
+100000000002,Sara Abdallah,1945-04-18,Norway,zip,sara.abdallah@example.com
+100000000003,Melvin Perrin,1964-08-20,France,zip,melvin.perrin@example.com
+100000000004,Dawn Snyder,1952-06-29,Australia,zip,dawn.snyder@example.com
+100000000005,Irina Kaptein,1984-11-10,Netherlands,zip,irina.kaptein@example.com
