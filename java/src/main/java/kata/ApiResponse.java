@@ -3,15 +3,15 @@ package kata;
 import java.util.List;
 
 public class ApiResponse {
-    private List<Result> results;
+    private List<ApiUser> results;
     private Info info;
 
     // Getters and setters
-    public List<Result> getResults() {
+    public List<ApiUser> getResults() {
         return results;
     }
 
-    public void setResults(List<Result> results) {
+    public void setResults(List<ApiUser> results) {
         this.results = results;
     }
 
@@ -23,7 +23,7 @@ public class ApiResponse {
         this.info = info;
     }
 
-    public static class Result {
+    public static class ApiUser {
         private String gender;
         private Name name;
         private Location location;
@@ -108,7 +108,7 @@ public class ApiResponse {
         private String city;
         private String state;
         private String country;
-        private int postcode;
+        private String postcode;
         private Coordinates coordinates;
         private Timezone timezone;
 
@@ -145,11 +145,11 @@ public class ApiResponse {
             this.country = country;
         }
 
-        public int getPostcode() {
+        public String getPostcode() {
             return postcode;
         }
 
-        public void setPostcode(int postcode) {
+        public void setPostcode(String postcode) {
             this.postcode = postcode;
         }
 

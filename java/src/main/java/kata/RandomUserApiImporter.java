@@ -8,9 +8,9 @@ import java.util.Scanner;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+@Deprecated(since = "2024-11-28", forRemoval = true)
 class RandomUserApiImporter implements Importer {
 
-  public static final String USER_URL = "https://randomuser.me/api/?inc=gender,name,email,location,dob&results=5&seed=a9b25cd955e2037h";
   // Parse URL content
   public String url;
 

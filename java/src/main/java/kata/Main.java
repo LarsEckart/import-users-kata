@@ -12,7 +12,7 @@ public class Main {
 
     List<Importer> importers = List.of(
         new CsvImporter("users.csv"),
-        new RandomUserApiImporter(RandomUserApiImporter.USER_URL),
+        new ModernRandomUserApiImporter(ModernRandomUserApiImporter.USER_URL),
         new SqLiteImporter("file:users-source.db")
     );
 

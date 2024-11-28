@@ -29,7 +29,7 @@ class ModernRandomUserApiImporter implements Importer {
             ApiResponse apiResponse = response.body();
 
             List<User> list = new ArrayList<>();
-            for (ApiResponse.Result result : apiResponse.getResults()) {
+            for (ApiResponse.ApiUser result : apiResponse.getResults()) {
                 list.add(parseUser(result));
             }
             return list;
@@ -38,7 +38,7 @@ class ModernRandomUserApiImporter implements Importer {
         }
     }
 
-    private User parseUser(ApiResponse.Result result) {
+    private User parseUser(ApiResponse.ApiUser result) {
         long id = idGenerator.next();
         String name = result.getName().getFirst() + " " + result.getName().getLast();
         Birthdate dob = Birthdate.of(LocalDate.parse(result.getDob().getDate().substring(0, 10)));
