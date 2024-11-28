@@ -4,15 +4,20 @@ import org.approvaltests.Approvals;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
-class RandomUserApiImporterTest {
+abstract class RandomUserApiImporterTest {
 
     @Test
     void applesauce() {
-        var apiImporter = new RandomUserApiImporter("https://randomuser.me/api/?inc=gender,name,email,location,dob&results=2&seed=a9b25cd955e2333h");
+        Approvals.settings().allowMultipleVerifyCallsForThisMethod();
+        var apiImporter = getImporter();
 
-        ArrayList<User> users = apiImporter.importUsers();
+        List<User> users = apiImporter.importUsers();
 
         Approvals.verifyAll("Imported Users", users);
     }
+
+    abstract Importer getImporter();
+
 }
