@@ -15,6 +15,8 @@ dependencies {
     implementation("org.jooq:jooq:3.19.14")
     implementation("org.jooq:jooq-meta:3.19.14")
     implementation("org.jooq:jooq-codegen:3.19.14")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.15.2")
+
 
     implementation(libs.json)
     implementation(libs.slf4j)
