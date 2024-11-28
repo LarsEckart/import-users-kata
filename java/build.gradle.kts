@@ -22,6 +22,9 @@ dependencies {
 
     testImplementation(libs.junit)
     testImplementation(libs.approvaltests)
+    testImplementation("org.assertj:assertj-core:3.26.0")
+
+
 }
 
 group = "kata"
