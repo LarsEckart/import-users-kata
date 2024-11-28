@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class ModernRandomUserApiImporter implements Importer {
+    public static final String USER_URL = "https://randomuser.me/api/?inc=gender,name,email,location,dob&results=5&seed=a9b25cd955e2037h";
     private final String url;
     public HttpClient httpClient = HttpClient.newHttpClient();
     public IdGenerator idGenerator = new IdGenerator();
